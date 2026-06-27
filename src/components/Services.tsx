@@ -10,7 +10,7 @@ import {
   Fish
 } from 'lucide-react';
 
-import imgKuliner from '../assets/images/tarumajaya_kuliner_1782571054402.jpg';
+import imgKuliner from '../assets/images/foto2.jpeg';
 import imgPemancingan from '../assets/images/tarumajaya_fishing_1782571068090.jpg';
 import imgWahana from '../assets/images/tarumajaya_playground_1782571083262.jpg';
 
