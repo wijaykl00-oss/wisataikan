@@ -1,0 +1,6 @@
+{
+  "name": "Wisata Ikan Tarumajaya",
+  "description": "Landing page modern dan profesional untuk Wisata Ikan Tarumajaya - destinasi rekreasi keluarga, kuliner saung, pemancingan, terapi ikan, dan edukasi perikanan di Bekasi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
