@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { ArrowRight, MapPin, Sparkles, ShieldCheck, Heart } from 'lucide-react';
-import heroImg from '../assets/images/tarumajaya_hero_1782571038200.jpg';
+import heroImg from '../assets/images/foto1.jpeg';
 
 export default function Hero() {
   const handleScrollTo = (id: string) => {

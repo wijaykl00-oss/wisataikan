@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, ZoomIn, ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
 
-import imgHero from '../assets/images/tarumajaya_hero_1782571038200.jpg';
-import imgKuliner from '../assets/images/foto2.jpeg';
+import imgHero from '../assets/images/foto1.jpeg';
+import imgKuliner from '../assets/images/tarumajaya_kuliner_1782571054402.jpg';
 import imgPemancingan from '../assets/images/tarumajaya_fishing_1782571068090.jpg';
 import imgWahana from '../assets/images/tarumajaya_playground_1782571083262.jpg';
 
