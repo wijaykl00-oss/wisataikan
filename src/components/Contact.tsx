@@ -3,12 +3,9 @@ import { motion } from 'motion/react';
 import { 
   Phone, 
   MapPin, 
-  Clock, 
   Send, 
   CheckCircle, 
-  Instagram, 
-  Facebook, 
-  Youtube
+  Instagram
 } from 'lucide-react';
 
 export default function Contact() {
@@ -179,31 +176,13 @@ Mohon informasi ketersediaan tempat dan koordinasi lebih lanjut. Terima kasih!`;
               </div>
               <div className="flex gap-3">
                 <a 
-                  href="https://instagram.com" 
+                  href="https://www.instagram.com/Wisataikantarumajaya" 
                   target="_blank" 
                   rel="noreferrer" 
                   className="w-9 h-9 rounded-xl bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors"
                   aria-label="Instagram"
                 >
                   <Instagram size={18} />
-                </a>
-                <a 
-                  href="https://facebook.com" 
-                  target="_blank" 
-                  rel="noreferrer" 
-                  className="w-9 h-9 rounded-xl bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors"
-                  aria-label="Facebook"
-                >
-                  <Facebook size={18} />
-                </a>
-                <a 
-                  href="https://tiktok.com" 
-                  target="_blank" 
-                  rel="noreferrer" 
-                  className="w-9 h-9 rounded-xl bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors font-bold text-xs"
-                  aria-label="TikTok"
-                >
-                  <span>d</span>
                 </a>
               </div>
             </div>
