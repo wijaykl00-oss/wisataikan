@@ -3,9 +3,9 @@ import { motion, AnimatePresence } from 'motion/react';
 import { X, ZoomIn, ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
 
 import imgHero from '../assets/images/foto1.jpeg';
-import imgKuliner from '../assets/images/tarumajaya_kuliner_1782571054402.jpg';
-import imgPemancingan from '../assets/images/tarumajaya_fishing_1782571068090.jpg';
-import imgWahana from '../assets/images/tarumajaya_playground_1782571083262.jpg';
+import imgKuliner from '../assets/images/foto3.jpeg';
+import imgPemancingan from '../assets/images/foto2.jpeg';
+import imgWahana from '../assets/images/foto4.jpeg';
 
 export default function Gallery() {
   const [activeCategory, setActiveCategory] = useState<'semua' | 'lanskap' | 'kuliner' | 'aktivitas'>('semua');
