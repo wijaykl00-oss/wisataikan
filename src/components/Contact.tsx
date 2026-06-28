@@ -4,8 +4,8 @@ import {
   Phone, 
   MapPin, 
   Send, 
-  CheckCircle, 
-  Instagram
+  CheckCircle,
+  Clock
 } from 'lucide-react';
 
 export default function Contact() {
@@ -14,24 +14,25 @@ export default function Contact() {
     phone: '',
     date: '',
     guests: '1-5',
-    service: 'Kuliner Saung Bambu',
+    service: 'Area Wisata Keluarga',
     notes: ''
   });
   const [isSuccess, setIsSuccess] = useState(false);
 
   const servicesList = [
-    'Kuliner Saung Bambu',
+    'Area Wisata Keluarga',
     'Kolam Pemancingan',
-    'Wahana Bermain Anak',
-    'Edukasi Budidaya Ikan',
-    'Penjualan Bibit Ikan',
-    'Sewa Tempat & Gathering'
+    'Gazebo / Tempat Bersantai',
+    'Area Kuliner',
+    'Spot Foto',
+    'Area Bermain Anak',
+    'Gathering Keluarga & Komunitas'
   ];
 
   const guestOptions = [
     { label: 'Keluarga Kecil (1-5 orang)', value: '1-5' },
     { label: 'Keluarga Sedang (6-12 orang)', value: '6-12' },
-    { label: 'Rombongan Arisan (13-25 orang)', value: '13-25' },
+    { label: 'Rombongan (13-25 orang)', value: '13-25' },
     { label: 'Gathering/Komunitas (25+ orang)', value: '25+' }
   ];
 
@@ -42,38 +43,38 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name || !formData.phone || !formData.date) {
-      alert('Mohon lengkapi Nama, No WhatsApp, dan Tanggal Kunjungan.');
+    if (!formData.name || !formData.phone) {
+      alert('Mohon lengkapi Nama dan No WhatsApp Anda.');
       return;
     }
 
-    // Format WhatsApp message
-    const formattedDate = new Date(formData.date).toLocaleDateString('id-ID', {
-      weekday: 'long',
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
+    const formattedDate = formData.date
+      ? new Date(formData.date).toLocaleDateString('id-ID', {
+          weekday: 'long',
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        })
+      : 'Belum ditentukan';
 
-    const waText = `Halo Admin Wisata Ikan Tarumajaya! 🎣
+    const waText = `Halo Admin Wisata Ikan Sungai Rindu! 🌿
 
-Saya ingin melakukan *Pre-Reservasi / Tanya Informasi Kunjungan*:
+Saya ingin bertanya / Pre-Reservasi Kunjungan:
 
 • *Nama Lengkap*: ${formData.name}
 • *No. WhatsApp*: ${formData.phone}
 • *Rencana Tanggal*: ${formattedDate}
 • *Perkiraan Jumlah Orang*: ${formData.guests} orang
-• *Layanan Utama*: ${formData.service}
+• *Layanan yang Diminati*: ${formData.service}
 ${formData.notes ? `• *Catatan Tambahan*: ${formData.notes}` : ''}
 
-Mohon informasi ketersediaan tempat dan koordinasi lebih lanjut. Terima kasih!`;
+Mohon informasi ketersediaan dan detail lebih lanjut. Terima kasih! 🙏`;
 
     const encodedText = encodeURIComponent(waText);
-    const phoneNumber = '6281388364632'; // Usaha WhatsApp number
+    const phoneNumber = '6287760943079';
     
     setIsSuccess(true);
     
-    // Redirect to WhatsApp after 1 second
     setTimeout(() => {
       window.open(`https://wa.me/${phoneNumber}?text=${encodedText}`, '_blank');
       setIsSuccess(false);
@@ -102,7 +103,7 @@ Mohon informasi ketersediaan tempat dan koordinasi lebih lanjut. Terima kasih!`;
             transition={{ duration: 0.5, delay: 0.1 }}
             className="font-display text-3xl sm:text-4xl font-extrabold text-gray-900 mt-3 tracking-tight"
           >
-            Rencanakan Hari Ceria Anda
+            Rencanakan Kunjungan Anda
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 15 }}
@@ -111,7 +112,7 @@ Mohon informasi ketersediaan tempat dan koordinasi lebih lanjut. Terima kasih!`;
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-gray-500 mt-4 font-light text-sm sm:text-base leading-relaxed"
           >
-            Gunakan form di bawah untuk membuat reservasi gratis atau bertanya informasi paket. Anda akan langsung terhubung ke layanan CS WhatsApp kami.
+            Isi form di bawah untuk menghubungi kami via WhatsApp, atau langsung hubungi nomor kami. Siap melayani 24 jam setiap hari!
           </motion.p>
         </div>
 
@@ -129,8 +130,8 @@ Mohon informasi ketersediaan tempat dan koordinasi lebih lanjut. Terima kasih!`;
                 </div>
                 <div className="space-y-1">
                   <h4 className="font-display font-bold text-gray-900 text-sm">WhatsApp Call & Chat</h4>
-                  <p className="text-gray-600 text-xs sm:text-sm font-semibold">+62 813-8836-4632</p>
-                  <p className="text-gray-400 text-[10px]">Tersedia 24/7 untuk chat penting</p>
+                  <p className="text-gray-600 text-xs sm:text-sm font-semibold">+62 877-6094-3079</p>
+                  <p className="text-gray-400 text-[10px]">Tersedia 24 Jam, siap melayani</p>
                 </div>
               </div>
 
@@ -139,12 +140,12 @@ Mohon informasi ketersediaan tempat dan koordinasi lebih lanjut. Terima kasih!`;
                   <MapPin size={20} />
                 </div>
                 <div className="space-y-1">
-                  <h4 className="font-display font-bold text-gray-900 text-sm">Alamat Lokasi Utama</h4>
+                  <h4 className="font-display font-bold text-gray-900 text-sm">Alamat Lokasi</h4>
                   <p className="text-gray-600 text-xs leading-normal font-light">
-                    Jl. Mutiara Gading Raya, Setia Asih, Kec. Tarumajaya, Bekasi, Jawa Barat
+                    Kp. Sembilangan RT 06/RW 04, Hurip Jaya, Babelan, Bekasi
                   </p>
                   <a 
-                    href="https://maps.google.com/?q=Wisata+Ikan+Tarumajaya"
+                    href="https://maps.google.com/?q=Wisata+Ikan+Sungai+Rindu+Babelan"
                     target="_blank"
                     rel="noreferrer"
                     className="inline-block text-[11px] text-amber-800 font-bold hover:underline"
@@ -156,11 +157,25 @@ Mohon informasi ketersediaan tempat dan koordinasi lebih lanjut. Terima kasih!`;
 
             </div>
 
+            {/* Jam Operasional Card */}
+            <div className="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm flex items-start gap-4">
+              <div className="w-10 h-10 rounded-xl bg-teal-50 flex items-center justify-center text-teal-600 shrink-0">
+                <Clock size={20} />
+              </div>
+              <div className="space-y-1">
+                <h4 className="font-display font-bold text-gray-900 text-sm">Jam Operasional</h4>
+                <p className="text-gray-600 text-xs font-light">
+                  Buka Setiap Hari — <strong className="text-gray-900 font-semibold">24 Jam</strong>
+                </p>
+                <p className="text-gray-400 text-[10px]">Kami siap menyambut Anda kapan saja!</p>
+              </div>
+            </div>
+
             {/* Live Interactive Map Box */}
             <div className="bg-white p-4 rounded-3xl border border-gray-100 shadow-sm overflow-hidden h-[360px] relative">
               <iframe
-                title="Google Maps Wisata Ikan Tarumajaya"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.529367180424!2d107.0125867!3d-6.1936528!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698be4e3f49771%3A0xe54e1fb564be6bc9!2sWisata%20Ikan%20Tarumajaya!5e0!3m2!1sid!2sid!4v1719412345678!5m2!1sid!2sid"
+                title="Google Maps Wisata Ikan Sungai Rindu Babelan"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1!2d107.0!3d-6.17!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTAnMTIuMCJTIDEwN8KwMDAnMDAuMCJF!5e0!3m2!1sid!2sid!4v1719412345678!5m2!1sid!2sid"
                 className="w-full h-full rounded-2xl border-0"
                 allowFullScreen={false}
                 loading="lazy"
@@ -168,35 +183,33 @@ Mohon informasi ketersediaan tempat dan koordinasi lebih lanjut. Terima kasih!`;
               ></iframe>
             </div>
 
-            {/* Social Media Link Connect */}
-            <div className="bg-gradient-to-r from-emerald-800 to-teal-900 text-white rounded-2xl p-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+            {/* CTA Banner */}
+            <div className="bg-gradient-to-r from-emerald-700 to-teal-800 text-white rounded-2xl p-6 flex flex-col sm:flex-row justify-between items-center gap-4">
               <div>
-                <h4 className="font-display font-bold text-sm tracking-wide">Ikuti Keseruan Kami di Sosial Media!</h4>
-                <p className="text-[11px] text-emerald-200 font-light mt-0.5">Dapatkan update menu promo, lomba mancing, dan kegiatan edukasi seru.</p>
+                <h4 className="font-display font-bold text-sm tracking-wide">Butuh Info Cepat? Hubungi Kami Sekarang!</h4>
+                <p className="text-[11px] text-emerald-200 font-light mt-0.5">Kami siap membantu reservasi, info harga, dan paket wisata Anda.</p>
               </div>
-              <div className="flex gap-3">
-                <a 
-                  href="https://www.instagram.com/Wisataikantarumajaya" 
-                  target="_blank" 
-                  rel="noreferrer" 
-                  className="w-9 h-9 rounded-xl bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors"
-                  aria-label="Instagram"
-                >
-                  <Instagram size={18} />
-                </a>
-              </div>
+              <a
+                href="https://wa.me/6287760943079?text=Halo%20Wisata%20Ikan%20Sungai%20Rindu%2C%20saya%20ingin%20bertanya%20informasi%20lebih%20lanjut."
+                target="_blank"
+                rel="noreferrer"
+                className="shrink-0 flex items-center gap-2 bg-white text-emerald-800 font-sans font-bold text-xs py-2.5 px-4 rounded-xl shadow-sm hover:bg-emerald-50 transition-colors whitespace-nowrap"
+              >
+                <Phone size={14} />
+                Chat WhatsApp
+              </a>
             </div>
 
           </div>
 
-          {/* Column 2: Booking Form (5 Cols) */}
+          {/* Column 2: Contact Form (5 Cols) */}
           <div className="lg:col-span-5">
             <div className="bg-white rounded-3xl border border-gray-100 shadow-lg p-6 sm:p-8">
               <h3 className="font-display font-bold text-xl text-gray-900 tracking-tight">
-                Pre-Reservasi Online
+                Hubungi Kami
               </h3>
               <p className="text-gray-500 text-xs sm:text-sm font-light leading-relaxed mt-2">
-                Isi form secara gratis. Pesan Anda akan langsung disusun dan dikirim via WhatsApp kami.
+                Isi form ini dan pesan Anda akan langsung dikirimkan via WhatsApp ke tim kami.
               </p>
 
               <form onSubmit={handleSubmit} className="mt-6 space-y-4">
@@ -209,7 +222,7 @@ Mohon informasi ketersediaan tempat dan koordinasi lebih lanjut. Terima kasih!`;
                     id="name"
                     name="name"
                     required
-                    placeholder="Contoh: Dian Setiawan"
+                    placeholder="Contoh: Sari Wulandari"
                     value={formData.name}
                     onChange={handleChange}
                     className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-white transition-all text-gray-800"
@@ -224,7 +237,7 @@ Mohon informasi ketersediaan tempat dan koordinasi lebih lanjut. Terima kasih!`;
                     id="phone"
                     name="phone"
                     required
-                    placeholder="Contoh: 081388364632"
+                    placeholder="Contoh: 087760943079"
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-white transition-all text-gray-800"
@@ -239,7 +252,6 @@ Mohon informasi ketersediaan tempat dan koordinasi lebih lanjut. Terima kasih!`;
                       type="date"
                       id="date"
                       name="date"
-                      required
                       value={formData.date}
                       onChange={handleChange}
                       className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-white transition-all text-gray-800"
@@ -285,7 +297,7 @@ Mohon informasi ketersediaan tempat dan koordinasi lebih lanjut. Terima kasih!`;
                     id="notes"
                     name="notes"
                     rows={3}
-                    placeholder="Contoh: Ingin memesan 1 saung besar kapasitas 15 orang untuk jam makan siang."
+                    placeholder="Contoh: Ingin reservasi gazebo untuk 10 orang di hari Minggu pagi."
                     value={formData.notes}
                     onChange={handleChange}
                     className="w-full bg-gray-50 border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-white transition-all text-gray-800"
@@ -296,17 +308,17 @@ Mohon informasi ketersediaan tempat dan koordinasi lebih lanjut. Terima kasih!`;
                 <button
                   type="submit"
                   disabled={isSuccess}
-                  className="w-full py-4 px-4 bg-gradient-to-r from-emerald-600 via-teal-600 to-green-600 hover:from-emerald-500 hover:to-green-500 text-white font-sans font-bold text-sm tracking-wide rounded-xl shadow-lg shadow-emerald-600/20 hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer"
+                  className="w-full py-4 px-4 bg-gradient-to-r from-emerald-600 via-teal-600 to-green-600 hover:from-emerald-500 hover:to-green-500 text-white font-sans font-bold text-sm tracking-wide rounded-xl shadow-lg shadow-emerald-600/20 hover:shadow-xl transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-70"
                 >
                   {isSuccess ? (
                     <>
                       <CheckCircle size={18} className="animate-bounce" />
-                      Membuat Form...
+                      Mengarahkan ke WhatsApp...
                     </>
                   ) : (
                     <>
                       <Send size={16} />
-                      Kirim via WhatsApp
+                      Hubungi Kami via WhatsApp
                     </>
                   )}
                 </button>

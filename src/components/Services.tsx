@@ -2,88 +2,89 @@ import { motion } from 'motion/react';
 import { 
   Utensils, 
   Sparkles, 
-  BookOpen, 
-  Sprout, 
+  Camera, 
+  Tent,
   PartyPopper, 
   Smile, 
   ArrowUpRight,
-  Fish
+  Fish,
+  Trees
 } from 'lucide-react';
 
+import imgKolam from '../assets/images/foto2.jpeg';
 import imgKuliner from '../assets/images/foto3.jpeg';
-import imgPemancingan from '../assets/images/foto2.jpeg';
 import imgWahana from '../assets/images/foto4.jpeg';
 
 export default function Services() {
   const services = [
     {
-      id: 'kuliner',
-      title: 'Kuliner Saung Bambu',
-      description: 'Nikmati aneka olahan ikan super segar seperti Gurame, Nila, Lele, Ayam, Bebek, hingga Sop Iga bakar langsung di atas saung bambu yang teduh dan romantis.',
-      icon: <Utensils className="text-emerald-500" size={24} />,
-      image: imgKuliner,
+      id: 'wisata-keluarga',
+      title: 'Area Wisata Keluarga',
+      description: 'Nikmati suasana alam yang asri bersama keluarga di area wisata yang luas, sejuk, dan nyaman. Cocok untuk semua usia — dari anak-anak hingga orang tua.',
+      icon: <Trees className="text-emerald-500" size={24} />,
+      image: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80',
       badge: 'Terfavorit',
-      price: 'Mulai Rp 15.000'
-    },
-    {
-      id: 'pemancingan',
-      title: 'Kolam Pemancingan Luas',
-      description: 'Salurkan hobi memancing Anda di kolam kami yang luas dengan stok ikan air tawar melimpah. Cocok untuk bersantai sendiri maupun perlombaan komunitas.',
-      icon: <Fish className="text-sky-500" size={24} />,
-      image: imgPemancingan,
-      badge: 'Rekomendasi',
-      price: 'Sesuai Hasil Tangkapan'
-    },
-    {
-      id: 'wahana',
-      title: 'Wahana Bermain Anak',
-      description: 'Surganya keceriaan anak-anak dengan fasilitas aman: Trampolin, Mandi Bola, Perosotan, Skuter, hingga mobil-mobilan di bawah pengawasan yang bersahabat.',
-      icon: <Smile className="text-amber-500" size={24} />,
-      image: imgWahana,
-      badge: 'Khusus Anak',
-      price: 'Mulai Rp 10.000'
-    },
-    {
-      id: 'terapi',
-      title: 'Terapi Ikan Alami',
-      description: 'Rasakan pijat refleksi alami dari ikan-ikan terapi berukuran kecil yang siap membersihkan sel kulit mati dan melancarkan peredaran darah Anda.',
-      icon: <Sparkles className="text-teal-500" size={24} />,
-      image: 'https://picsum.photos/seed/therapyfish/600/400',
-      badge: 'Gratis',
-      price: 'Rp 0 (Khusus Pengunjung)'
-    },
-    {
-      id: 'edukasi',
-      title: 'Edukasi Budidaya Ikan',
-      description: 'Program wisata edukasi interaktif untuk anak sekolah, keluarga, maupun instansi guna mempelajari seluk beluk pembibitan & budidaya ikan air tawar.',
-      icon: <BookOpen className="text-indigo-500" size={24} />,
-      image: 'https://picsum.photos/seed/fishedution/600/400',
-      badge: 'Edukasi',
       price: 'Hubungi Kami'
     },
     {
-      id: 'bibit',
-      title: 'Penjualan Bibit & Ikan Segar',
-      description: 'Menjual bibit ikan air tawar unggul (Nila, Gurame, Lele, Patin) serta ikan konsumsi hidup berkualitas prima langsung dari kolam budidaya terbaik kami.',
-      icon: <Sprout className="text-green-500" size={24} />,
-      image: 'https://picsum.photos/seed/fishseeds/600/400',
-      badge: 'Grosir & Ecer',
-      price: 'Harga Bersahabat'
+      id: 'pemancingan',
+      title: 'Kolam Pemancingan',
+      description: 'Salurkan hobi memancing di kolam kami yang luas dengan stok ikan air tawar yang melimpah. Cocok untuk santai sendiri, bersama keluarga, maupun perlombaan komunitas.',
+      icon: <Fish className="text-sky-500" size={24} />,
+      image: imgKolam,
+      badge: 'Rekomendasi',
+      price: 'Hubungi Kami'
     },
     {
-      id: 'acara',
-      title: 'Sewa Tempat & Gathering',
-      description: 'Sediakan area outdoor yang luas untuk berbagai event spesial: Ulang tahun, Family gathering perusahaan, Reuni, Arisan, Rapat, hingga resepsi Pernikahan.',
+      id: 'gazebo',
+      title: 'Gazebo / Tempat Bersantai',
+      description: 'Bersantai di gazebo kami yang nyaman di tengah suasana alam yang hijau dan sejuk. Tempat ideal untuk melepas penat sambil menikmati pemandangan kolam.',
+      icon: <Tent className="text-teal-500" size={24} />,
+      image: 'https://images.unsplash.com/photo-1596422846543-75c6fc18a523?auto=format&fit=crop&w=800&q=80',
+      badge: 'Nyaman',
+      price: 'Hubungi Kami'
+    },
+    {
+      id: 'kuliner',
+      title: 'Area Kuliner',
+      description: 'Nikmati aneka hidangan lezat berbahan dasar ikan segar dan menu pilihan lainnya. Makan sembari menikmati suasana alam yang asri — pengalaman kuliner yang tak terlupakan.',
+      icon: <Utensils className="text-amber-500" size={24} />,
+      image: imgKuliner,
+      badge: 'Lezat',
+      price: 'Hubungi Kami'
+    },
+    {
+      id: 'spot-foto',
+      title: 'Spot Foto',
+      description: 'Abadikan momen terbaik bersama orang-orang tersayang di berbagai spot foto instagramable yang didesain dengan latar alam yang indah dan natural.',
+      icon: <Camera className="text-indigo-500" size={24} />,
+      image: 'https://images.unsplash.com/photo-1501555088652-021faa106b9b?auto=format&fit=crop&w=800&q=80',
+      badge: 'Instagramable',
+      price: 'Hubungi Kami'
+    },
+    {
+      id: 'bermain-anak',
+      title: 'Area Bermain Anak',
+      description: 'Surganya keceriaan untuk si kecil! Area bermain anak yang aman dan menyenangkan agar buah hati Anda tetap aktif, bahagia, dan terhibur selama berkunjung.',
+      icon: <Smile className="text-rose-500" size={24} />,
+      image: imgWahana,
+      badge: 'Khusus Anak',
+      price: 'Hubungi Kami'
+    },
+    {
+      id: 'gathering',
+      title: 'Gathering Keluarga & Komunitas',
+      description: 'Area yang luas dan representatif untuk gathering keluarga besar, acara komunitas, reuni, arisan, ulang tahun, dan berbagai kegiatan kelompok lainnya.',
       icon: <PartyPopper className="text-pink-500" size={24} />,
-      image: 'https://picsum.photos/seed/gatheringevent/600/400',
+      image: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80',
       badge: 'Kapasitas Besar',
-      price: 'Paket Kustom'
+      price: 'Hubungi Kami'
     },
   ];
 
   const handleBook = (title: string) => {
-    const text = encodeURIComponent(`Halo Wisata Ikan Tarumajaya, saya tertarik bertanya tentang layanan: ${title}. Mohon informasinya.`);
-    window.open(`https://wa.me/6281388364632?text=${text}`, '_blank');
+    const text = encodeURIComponent(`Halo Wisata Ikan Sungai Rindu, saya tertarik bertanya tentang layanan: ${title}. Mohon informasinya.`);
+    window.open(`https://wa.me/6287760943079?text=${text}`, '_blank');
   };
 
   return (
@@ -99,6 +100,7 @@ export default function Services() {
             transition={{ duration: 0.5 }}
             className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider"
           >
+            <Sparkles size={12} />
             Layanan & Fasilitas
           </motion.div>
           <motion.h2
@@ -108,7 +110,7 @@ export default function Services() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="font-display text-3xl sm:text-4xl font-extrabold text-gray-900 mt-3 tracking-tight"
           >
-            Sajian Utama & Kegiatan Menarik
+            Sajian Utama & Aktivitas Seru
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 15 }}
@@ -117,7 +119,7 @@ export default function Services() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-gray-500 mt-4 font-light text-sm sm:text-base leading-relaxed"
           >
-            Dari memanjakan lidah hingga edukasi si kecil, jelajahi berbagai pengalaman seru yang dirancang khusus untuk kenyamanan liburan keluarga Anda.
+            Dari menikmati alam, memancing, bersantai di gazebo, hingga gathering bersama komunitas — semua tersedia di Wisata Ikan Sungai Rindu untuk pengalaman liburan keluarga yang sempurna.
           </motion.p>
         </div>
 
@@ -171,7 +173,7 @@ export default function Services() {
                     onClick={() => handleBook(service.title)}
                     className="flex items-center gap-1.5 text-xs text-emerald-700 font-bold hover:text-emerald-600 group-hover:underline transition-colors cursor-pointer"
                   >
-                    Tanya Detail & Reservasi
+                    Hubungi Kami untuk Info
                     <ArrowUpRight size={14} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </button>
                 </div>

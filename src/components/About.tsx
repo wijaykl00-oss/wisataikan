@@ -3,9 +3,9 @@ import { Calendar, Clock, Sparkles, MapPin, Smile, Users, Fish } from 'lucide-re
 
 export default function About() {
   const stats = [
-    { label: 'Pengunjung Ceria', value: '15,000+', icon: <Smile className="text-emerald-500" size={20} /> },
-    { label: 'Jenis Ikan Air Tawar', value: '8+', icon: <Fish className="text-teal-500" size={20} /> },
-    { label: 'Kapasitas Acara', value: '300+', icon: <Users className="text-amber-600" size={20} /> },
+    { label: 'Pengunjung Ceria', value: '5.000+', icon: <Smile className="text-emerald-500" size={20} /> },
+    { label: 'Jenis Layanan', value: '7+', icon: <Fish className="text-teal-500" size={20} /> },
+    { label: 'Kapasitas Gathering', value: '200+', icon: <Users className="text-blue-600" size={20} /> },
   ];
 
   return (
@@ -34,8 +34,8 @@ export default function About() {
               className="font-display text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight"
             >
               Selamat Datang di <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-600 to-amber-700">
-                Wisata Ikan Tarumajaya
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 via-teal-500 to-blue-600">
+                Wisata Ikan Sungai Rindu
               </span>
             </motion.h2>
 
@@ -46,7 +46,7 @@ export default function About() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-gray-600 leading-relaxed text-sm sm:text-base font-light"
             >
-              Wisata Ikan Tarumajaya merupakan destinasi wisata keluarga unggulan yang memadukan rekreasi alam, edukasi budidaya ikan air tawar, petualangan kuliner, dan kolam pemancingan yang luas dalam satu kesatuan lokasi yang sejuk dan asri.
+              Wisata Ikan Sungai Rindu merupakan destinasi wisata keluarga yang menawarkan suasana alam yang asri dengan kolam ikan, area pemancingan, tempat bersantai, dan kuliner. Tempat ini cocok untuk menghabiskan waktu bersama keluarga, teman, maupun komunitas sambil menikmati suasana pedesaan yang nyaman dan menyegarkan.
             </motion.p>
 
             <motion.p
@@ -56,7 +56,7 @@ export default function About() {
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-gray-600 leading-relaxed text-sm sm:text-base font-light"
             >
-              Kami mengundang Anda untuk melepaskan kepenatan dari hiruk-pikuk perkotaan di bawah naungan saung bambu kami yang teduh di atas hamparan air kolam yang tenang. Rasakan kepuasan menikmati olahan kuliner ikan super segar langsung hasil tangkapan sendiri, nikmati terapi ikan gratis demi kebugaran tubuh, serta fasilitasi buah hati Anda dengan berbagai wahana permainan anak yang edukatif dan menyehatkan.
+              Berlokasi di Kp. Sembilangan, Hurip Jaya, Kecamatan Babelan, Kabupaten Bekasi — kami hadir sebagai oasis ketenangan di tengah kesibukan perkotaan. Bawa keluarga, anak-anak, atau komunitas Anda untuk menikmati alam terbuka, memancing, bersantai di gazebo, dan menikmati kuliner segar yang menggugah selera.
             </motion.p>
 
             {/* Quick Stats */}
@@ -105,22 +105,22 @@ export default function About() {
                   <div>
                     <h4 className="font-display font-semibold text-sm">Jam Operasional</h4>
                     <p className="font-sans text-xs text-emerald-100/90 mt-1 leading-relaxed">
-                      Setiap Hari<br />
-                      Pukul <strong className="text-white">08.00 - 21.00 WIB</strong>
+                      Buka Setiap Hari<br />
+                      <strong className="text-white">24 Jam (Siap Melayani)</strong>
                     </p>
                   </div>
                 </div>
 
-                {/* Tiket Masuk */}
+                {/* Harga Tiket */}
                 <div className="flex gap-4 items-start">
                   <div className="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center shrink-0">
                     <Calendar className="text-emerald-300" size={20} />
                   </div>
                   <div>
-                    <h4 className="font-display font-semibold text-sm">Tiket Masuk & Reservasi</h4>
+                    <h4 className="font-display font-semibold text-sm">Harga & Tiket Masuk</h4>
                     <p className="font-sans text-xs text-emerald-100/90 mt-1 leading-relaxed">
-                      Masuk area mulai dari <strong className="text-white">Rp 10.000</strong> per orang.<br />
-                      Fasilitas terapi ikan tersedia <strong className="text-white">Gratis</strong> untuk seluruh pengunjung.
+                      Informasi harga dapat ditanyakan langsung.<br />
+                      Hubungi kami via WhatsApp untuk detail paket.
                     </p>
                   </div>
                 </div>
@@ -133,21 +133,28 @@ export default function About() {
                   <div>
                     <h4 className="font-display font-semibold text-sm">Alamat Lokasi</h4>
                     <p className="font-sans text-xs text-emerald-100/90 mt-1 leading-relaxed">
-                      Jl. Mutiara Gading Raya, Setia Asih, Kecamatan Tarumajaya, Kabupaten Bekasi, Jawa Barat 17215.
+                      Kp. Sembilangan RT 06/RW 04, Hurip Jaya, Kec. Babelan, Kabupaten Bekasi, Jawa Barat.
                     </p>
                   </div>
                 </div>
 
-                <div className="pt-4">
-                  <button
-                    onClick={() => {
-                      const element = document.querySelector('#kontak');
-                      if (element) element.scrollIntoView({ behavior: 'smooth' });
-                    }}
-                    className="w-full py-3.5 px-4 bg-white hover:bg-emerald-50 text-emerald-800 font-sans font-bold text-xs rounded-xl tracking-wider uppercase transition-colors shadow-md shadow-emerald-950/20"
+                <div className="pt-4 flex flex-col gap-3">
+                  <a
+                    href="https://wa.me/6287760943079?text=Halo%20Wisata%20Ikan%20Sungai%20Rindu%2C%20saya%20ingin%20bertanya%20informasi%20lebih%20lanjut."
+                    target="_blank"
+                    rel="noreferrer"
+                    className="w-full py-3.5 px-4 bg-white hover:bg-emerald-50 text-emerald-800 font-sans font-bold text-xs rounded-xl tracking-wider uppercase transition-colors shadow-md shadow-emerald-950/20 text-center"
+                  >
+                    Hubungi Kami via WhatsApp
+                  </a>
+                  <a
+                    href="https://maps.google.com/?q=Wisata+Ikan+Sungai+Rindu+Babelan"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="w-full py-3 px-4 bg-white/10 hover:bg-white/20 text-white font-sans font-bold text-xs rounded-xl tracking-wider uppercase transition-colors text-center border border-white/20"
                   >
                     Petunjuk Rute & Google Maps
-                  </button>
+                  </a>
                 </div>
               </div>
             </motion.div>

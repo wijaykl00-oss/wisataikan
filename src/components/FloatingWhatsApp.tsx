@@ -2,26 +2,33 @@ import React, { useState, useEffect } from 'react';
 import { MessageCircle, X, Send, User } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
-export default function FloatingWhatsApp() {
+const WA_NUMBER = '6287760943079';
+const DEFAULT_MESSAGE = 'Halo Wisata Ikan Sungai Rindu 🌿, saya tertarik untuk berkunjung bersama keluarga. Bisakah dibantu informasi lebih lanjut?';
+
+interface FloatingWhatsAppProps {
+  message?: string;
+}
+
+export default function FloatingWhatsApp({ message }: FloatingWhatsAppProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const [message, setMessage] = useState('');
+  const [inputMessage, setInputMessage] = useState('');
   const [showTooltip, setShowTooltip] = useState(false);
 
   useEffect(() => {
-    // Show tooltip after 5 seconds to grab attention
     const timer = setTimeout(() => {
-      setShowTooltip(true);
-    }, 5000);
+      if (!isOpen) setShowTooltip(true);
+    }, 3000);
     return () => clearTimeout(timer);
-  }, []);
+  }, [isOpen]);
 
   const handleSend = (e: React.FormEvent) => {
     e.preventDefault();
-    const phone = '6281388364632';
-    const text = message ? encodeURIComponent(message) : encodeURIComponent('Halo Wisata Ikan Tarumajaya, saya tertarik untuk berkunjung bersama keluarga. Bisakah dibantu informasi lebih lanjut?');
-    window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
+    const text = inputMessage.trim()
+      ? encodeURIComponent(inputMessage)
+      : encodeURIComponent(message || DEFAULT_MESSAGE);
+    window.open(`https://wa.me/${WA_NUMBER}?text=${text}`, '_blank');
     setIsOpen(false);
-    setMessage('');
+    setInputMessage('');
   };
 
   const handleDirectClick = () => {
@@ -52,7 +59,7 @@ export default function FloatingWhatsApp() {
               </div>
               <div>
                 <p className="font-semibold text-xs text-gray-800">Customer Service</p>
-                <p className="text-xs text-gray-500 mt-0.5">Halo! Ada yang bisa kami bantu hari ini untuk rencana liburan Anda?</p>
+                <p className="text-xs text-gray-500 mt-0.5">Halo! Ada yang bisa kami bantu untuk rencana wisata Anda?</p>
               </div>
             </div>
             <div className="mt-3 flex justify-end">
@@ -90,7 +97,7 @@ export default function FloatingWhatsApp() {
                     <span className="absolute bottom-0 right-0 w-3 h-3 bg-emerald-400 border-2 border-white rounded-full"></span>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-sm">Wisata Ikan Tarumajaya</h4>
+                    <h4 className="font-semibold text-sm">Wisata Ikan Sungai Rindu</h4>
                     <p className="text-xs text-emerald-100 flex items-center gap-1">
                       <span className="w-1.5 h-1.5 bg-emerald-300 rounded-full animate-ping"></span>
                       Online • Siap membantu
@@ -109,28 +116,30 @@ export default function FloatingWhatsApp() {
             {/* Chat Body */}
             <div className="p-4 bg-gray-50 h-48 overflow-y-auto text-xs space-y-3">
               <div className="bg-emerald-100 text-emerald-950 p-3 rounded-2xl rounded-tl-none max-w-[85%] shadow-sm">
-                <p className="font-semibold text-[10px] text-emerald-800 mb-0.5">Admin Wisata Ikan</p>
-                Selamat datang di Wisata Ikan Tarumajaya! 🎣 
-
-Silakan sampaikan pertanyaan Anda mengenai reservasi tempat, harga tiket, kuliner saung, atau kolam pemancingan di bawah ini.
+                <p className="font-semibold text-[10px] text-emerald-800 mb-0.5">Admin Wisata Ikan Sungai Rindu</p>
+                Selamat datang di Wisata Ikan Sungai Rindu! 🌿🎣{'\n\n'}
+                Silakan sampaikan pertanyaan Anda mengenai kunjungan, harga, fasilitas, atau reservasi tempat di bawah ini.
               </div>
-              <div className="text-gray-400 text-center text-[10px] my-2">
-                Hari ini
+              <div className="bg-emerald-100 text-emerald-950 p-3 rounded-2xl rounded-tl-none max-w-[85%] shadow-sm">
+                <p className="text-[10px] leading-relaxed">
+                  📍 Kp. Sembilangan RT 06/RW 04, Hurip Jaya, Babelan, Bekasi<br />
+                  ⏰ Buka 24 Jam Setiap Hari
+                </p>
               </div>
             </div>
 
-            {/* Input form */}
-            <form onSubmit={handleSend} className="p-3 bg-white border-t border-gray-100 flex gap-2">
+            {/* Input Area */}
+            <form onSubmit={handleSend} className="p-3 border-t border-gray-100 flex gap-2 bg-white">
               <input
                 type="text"
-                placeholder="Tulis pesan ke WhatsApp..."
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                className="flex-1 bg-gray-100 rounded-xl px-3 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:bg-white transition-all text-gray-800"
+                value={inputMessage}
+                onChange={(e) => setInputMessage(e.target.value)}
+                placeholder="Tulis pesan Anda..."
+                className="flex-1 text-xs bg-gray-50 border border-gray-200 rounded-xl px-3 py-2 focus:outline-none focus:ring-1 focus:ring-emerald-400 text-gray-700"
               />
               <button
                 type="submit"
-                className="w-9 h-9 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl flex items-center justify-center shadow-md shadow-emerald-500/20 shrink-0 transition-colors"
+                className="w-9 h-9 bg-emerald-500 hover:bg-emerald-600 text-white rounded-xl flex items-center justify-center transition-colors shrink-0"
               >
                 <Send size={14} />
               </button>
@@ -139,18 +148,17 @@ Silakan sampaikan pertanyaan Anda mengenai reservasi tempat, harga tiket, kuline
         )}
       </AnimatePresence>
 
-      {/* Floating Button */}
+      {/* Main Floating Button */}
       <motion.button
-        id="floating-whatsapp-btn"
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
         onClick={handleDirectClick}
-        className="relative w-14 h-14 bg-gradient-to-r from-emerald-500 to-green-600 rounded-full flex items-center justify-center text-white shadow-lg shadow-emerald-500/30 cursor-pointer focus:outline-none focus:ring-4 focus:ring-emerald-300"
+        whileHover={{ scale: 1.08 }}
+        whileTap={{ scale: 0.95 }}
+        className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-full shadow-2xl shadow-emerald-500/30 flex items-center justify-center text-white hover:shadow-emerald-500/50 transition-shadow"
+        aria-label="Chat WhatsApp"
       >
-        <span className="absolute -top-1 -right-1 w-4 h-4 bg-amber-500 rounded-full border-2 border-white flex items-center justify-center">
-          <span className="w-1.5 h-1.5 bg-white rounded-full animate-ping"></span>
-        </span>
-        <MessageCircle size={28} className="animate-pulse" />
+        <MessageCircle size={26} fill="white" strokeWidth={0} />
+        {/* Pulse ring */}
+        <span className="absolute w-14 h-14 rounded-full border-2 border-emerald-400 animate-ping opacity-30"></span>
       </motion.button>
     </div>
   );

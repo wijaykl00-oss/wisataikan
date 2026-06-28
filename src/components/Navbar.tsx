@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Phone, Compass } from 'lucide-react';
+import { Menu, X, Phone, Fish } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 export default function Navbar() {
@@ -52,15 +52,15 @@ export default function Navbar() {
               onClick={(e) => handleScrollTo(e, '#beranda')}
               className="flex items-center gap-2 group cursor-pointer"
             >
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-600 via-teal-600 to-amber-700 flex items-center justify-center shadow-md shadow-emerald-600/10 transition-transform duration-300 group-hover:scale-105">
-                <Compass className="text-white w-6 h-6 animate-spin-slow" />
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 via-teal-500 to-blue-600 flex items-center justify-center shadow-md shadow-emerald-600/20 transition-transform duration-300 group-hover:scale-105">
+                <Fish className="text-white w-6 h-6" />
               </div>
               <div className="flex flex-col">
                 <span className={`font-display font-bold text-base leading-tight tracking-tight transition-colors duration-300 ${isScrolled ? 'text-gray-900' : 'text-white'}`}>
                   Wisata Ikan
                 </span>
                 <span className={`font-sans font-medium text-xs tracking-wider transition-colors duration-300 ${isScrolled ? 'text-emerald-600' : 'text-emerald-300'}`}>
-                  TARUMAJAYA
+                  SUNGAI RINDU
                 </span>
               </div>
             </a>
@@ -85,10 +85,10 @@ export default function Navbar() {
 
               {/* Header CTA */}
               <a
-                href="https://wa.me/6281388364632?text=Halo%20Wisata%20Ikan%20Tarumajaya%20saya%20tertarik%20untuk%20reservasi%20tempat%20atau%20berkunjung..."
+                href="https://wa.me/6287760943079?text=Halo%20Wisata%20Ikan%20Sungai%20Rindu%2C%20saya%20tertarik%20untuk%20berkunjung.%20Bisakah%20dibantu%20informasinya%3F"
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-2 bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-500 hover:to-green-500 text-white font-sans text-xs font-semibold py-2.5 px-4 rounded-full shadow-md shadow-emerald-600/20 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
+                className="flex items-center gap-2 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-sans text-xs font-semibold py-2.5 px-4 rounded-full shadow-md shadow-emerald-600/20 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
               >
                 <Phone size={14} />
                 Hubungi Kami
@@ -135,10 +135,10 @@ export default function Navbar() {
               <div>
                 <div className="flex items-center justify-between pb-6 border-b border-gray-100">
                   <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 rounded-lg bg-emerald-600 flex items-center justify-center text-white">
-                      <Compass size={18} />
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white">
+                      <Fish size={18} />
                     </div>
-                    <span className="font-display font-bold text-gray-900 text-sm">Wisata Ikan Tarumajaya</span>
+                    <span className="font-display font-bold text-gray-900 text-sm">Wisata Ikan Sungai Rindu</span>
                   </div>
                   <button
                     onClick={() => setIsMobileMenuOpen(false)}
@@ -168,10 +168,10 @@ export default function Navbar() {
               {/* Mobile CTA */}
               <div className="pt-6 border-t border-gray-100">
                 <a
-                  href="https://wa.me/6281388364632?text=Halo%20Wisata%20Ikan%20Tarumajaya%20saya%20tertarik%20untuk%20reservasi%20tempat%20atau%20berkunjung..."
+                  href="https://wa.me/6287760943079?text=Halo%20Wisata%20Ikan%20Sungai%20Rindu%2C%20saya%20tertarik%20untuk%20berkunjung.%20Bisakah%20dibantu%20informasinya%3F"
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-emerald-600 to-green-600 text-white font-sans font-bold py-3 px-4 rounded-xl shadow-md"
+                  className="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-sans font-bold py-3 px-4 rounded-xl shadow-md"
                 >
                   <Phone size={16} />
                   Hubungi CS Kami

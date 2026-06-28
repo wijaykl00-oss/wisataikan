@@ -2,92 +2,92 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, ZoomIn, ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
 
-import imgHero from '../assets/images/foto1.jpeg';
+import imgHero from '../assets/images/fotojembatan1.webp';
+import imgKolam from '../assets/images/foto2.jpeg';
 import imgKuliner from '../assets/images/foto3.jpeg';
-import imgPemancingan from '../assets/images/foto2.jpeg';
 import imgWahana from '../assets/images/foto4.jpeg';
 
 export default function Gallery() {
-  const [activeCategory, setActiveCategory] = useState<'semua' | 'lanskap' | 'kuliner' | 'aktivitas'>('semua');
+  const [activeCategory, setActiveCategory] = useState<'semua' | 'alam' | 'aktivitas' | 'kuliner'>('semua');
   const [selectedImageIndex, setSelectedImageIndex] = useState<number | null>(null);
 
   const categories = [
     { id: 'semua', label: 'Semua Foto' },
-    { id: 'lanskap', label: 'Lanskap & Saung' },
-    { id: 'kuliner', label: 'Aneka Kuliner' },
-    { id: 'aktivitas', label: 'Aktivitas & Edukasi' },
+    { id: 'alam', label: 'Suasana Alam' },
+    { id: 'aktivitas', label: 'Aktivitas & Fasilitas' },
+    { id: 'kuliner', label: 'Kuliner' },
   ];
 
   const galleryItems = [
     {
       id: 1,
-      category: 'lanskap',
-      title: 'Gerbang Masuk Utama',
-      description: 'Gerbang selamat datang dengan arsitektur bambu yang megah dan estetik menyambut setiap pengunjung.',
+      category: 'alam',
+      title: 'Gerbang Wisata Sungai Rindu',
+      description: 'Gerbang selamat datang yang asri menyambut setiap pengunjung dengan nuansa alam yang sejuk dan segar.',
       imageUrl: 'https://images.unsplash.com/photo-1546548970-71785318a17b?auto=format&fit=crop&w=800&q=80',
     },
     {
       id: 2,
-      category: 'lanskap',
-      title: 'Lanskap Kolam & Saung Apung',
-      description: 'Pemandangan asri saung bambu di atas kolam air tawar yang tenang kala sore hari menjelang terbenamnya matahari.',
+      category: 'alam',
+      title: 'Kolam Ikan yang Jernih',
+      description: 'Hamparan kolam ikan yang jernih dan tenang dikelilingi pepohonan hijau yang rindang — pemandangan yang menyegarkan.',
       imageUrl: imgHero,
     },
     {
       id: 3,
-      category: 'lanskap',
-      title: 'Interior Saung Bambu Nyaman',
-      description: 'Saung bambu anyaman tradisional yang bersih, dilengkapi fasilitas lesehan, kipas angin, dan stop kontak.',
-      imageUrl: 'https://images.unsplash.com/photo-1596422846543-75c6fc18a523?auto=format&fit=crop&w=800&q=80',
+      category: 'alam',
+      title: 'Suasana Alam Pedesaan',
+      description: 'Nuansa alam pedesaan yang autentik dan menenangkan, jauh dari hiruk-pikuk perkotaan namun mudah dijangkau.',
+      imageUrl: 'https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=800&q=80',
     },
     {
       id: 4,
       category: 'kuliner',
-      title: 'Gurame Bakar Sambal Tarumajaya',
-      description: 'Sajian unggulan gurame bakar kaya rempah disajikan lengkap dengan sambal terasi khas, lalapan segar, dan jeruk nipis.',
+      title: 'Area Kuliner Segar',
+      description: 'Sajian kuliner berbahan dasar ikan segar dan menu pilihan lainnya yang lezat dengan suasana makan di alam terbuka.',
       imageUrl: imgKuliner,
     },
     {
       id: 5,
       category: 'aktivitas',
-      title: 'Area Kolam Pemancingan',
-      description: 'Keseruan memancing bersama keluarga di tepian kolam berpagar yang aman, sejuk, dan teduh.',
-      imageUrl: imgPemancingan,
+      title: 'Area Pemancingan',
+      description: 'Keseruan memancing bersama keluarga di kolam yang luas dengan stok ikan melimpah — pengalaman yang menyenangkan untuk semua usia.',
+      imageUrl: imgKolam,
     },
     {
       id: 6,
       category: 'aktivitas',
-      title: 'Wahana Bermain Anak Ceria',
-      description: 'Fasilitas bermain outdoor komplit mulai dari trampolin, perosotan, mandi bola, dan permainan ketangkasan anak.',
+      title: 'Area Bermain Anak',
+      description: 'Area bermain yang aman dan menyenangkan khusus untuk si kecil agar tetap aktif dan bahagia selama berkunjung.',
       imageUrl: imgWahana,
     },
     {
       id: 7,
       category: 'aktivitas',
-      title: 'Spot Foto Jembatan Kayu',
-      description: 'Jembatan kayu estetik yang membentang di tengah kolam menjadi spot foto favorit untuk mengabadikan momen berharga.',
+      title: 'Spot Foto Instagramable',
+      description: 'Berbagai spot foto dengan latar alam yang indah dan natural. Abadikan momen terbaik bersama keluarga dan sahabat.',
       imageUrl: 'https://images.unsplash.com/photo-1501555088652-021faa106b9b?auto=format&fit=crop&w=800&q=80',
     },
     {
       id: 8,
       category: 'aktivitas',
-      title: 'Momen Gathering Keluarga',
-      description: 'Kebersamaan rombongan keluarga besar menikmati santapan siang sambil bersenda gurau di saung utama.',
+      title: 'Gathering & Kebersamaan',
+      description: 'Area yang luas dan representatif untuk gathering keluarga besar, komunitas, atau kelompok dalam suasana alam yang nyaman.',
       imageUrl: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80',
     },
     {
       id: 9,
       category: 'aktivitas',
-      title: 'Pusat Pembibitan Ikan Nila',
-      description: 'Kolam khusus pembesaran bibit ikan nila unggul berkualitas tinggi yang siap dibeli oleh pengunjung.',
-      imageUrl: 'https://images.unsplash.com/photo-1524704659674-3ee2e61a499a?auto=format&fit=crop&w=800&q=80',
+      title: 'Gazebo & Tempat Bersantai',
+      description: 'Gazebo yang nyaman untuk bersantai menikmati suasana alam sambil beristirahat dari aktivitas wisata yang seru.',
+      imageUrl: 'https://images.unsplash.com/photo-1596422846543-75c6fc18a523?auto=format&fit=crop&w=800&q=80',
     },
     {
       id: 10,
-      category: 'lanskap',
-      title: 'Suasana Syahdu Malam Hari',
-      description: 'Kecantikan pendaran lampu gantung kuning yang menghias setiap sudut saung bambu dan kolam pada malam hari.',
-      imageUrl: 'https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=800&q=80',
+      category: 'alam',
+      title: 'Hijau Alam Sungai Rindu',
+      description: 'Panorama alam yang hijau dan asri, dengan angin sepoi-sepoi yang membuat setiap kunjungan terasa istimewa dan berkesan.',
+      imageUrl: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80',
     }
   ];
 
@@ -131,7 +131,7 @@ export default function Gallery() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="font-display text-3xl sm:text-4xl font-extrabold text-gray-900 mt-3 tracking-tight"
           >
-            Potret Keindahan Kolam & Saung
+            Potret Keindahan Sungai Rindu
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 15 }}
@@ -140,7 +140,7 @@ export default function Gallery() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-gray-500 mt-4 font-light text-sm sm:text-base leading-relaxed"
           >
-            Intip sudut-sudut paling asri, sajian menu terlezat, dan keceriaan pengunjung di Wisata Ikan Tarumajaya lewat lensa kamera kami.
+            Intip sudut-sudut paling asri, fasilitas lengkap, dan keceriaan pengunjung di Wisata Ikan Sungai Rindu lewat lensa kamera kami.
           </motion.p>
 
           {/* Filter Categories */}
@@ -191,7 +191,7 @@ export default function Gallery() {
                   <div className="text-white transform translate-y-3 group-hover:translate-y-0 transition-transform duration-300">
                     <div className="flex items-center gap-1.5 text-emerald-400 text-[10px] font-bold uppercase tracking-wider mb-1">
                       <Sparkles size={10} />
-                      {item.category === 'lanskap' ? 'Saung & Lanskap' : item.category === 'kuliner' ? 'Kuliner' : 'Aktivitas'}
+                      {item.category === 'alam' ? 'Suasana Alam' : item.category === 'kuliner' ? 'Kuliner' : 'Aktivitas'}
                     </div>
                     <h3 className="font-display font-bold text-sm tracking-tight">{item.title}</h3>
                     <p className="text-[11px] text-gray-300/90 font-light leading-tight mt-1 truncate">{item.description}</p>

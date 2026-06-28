@@ -5,25 +5,25 @@ export default function Testimonials() {
   const reviews = [
     {
       id: 1,
-      name: 'Bapak Dian Setiawan',
+      name: 'Ibu Sari Wulandari',
       role: 'Pengunjung Keluarga (Bekasi)',
-      text: 'Tempatnya nyaman sekali untuk kumpul keluarga besar. Saung di atas kolam bikin suasana sejuk. Makanannya enak banget, ikannya segar-segar karena bisa langsung mancing sendiri. Anak-anak betah bermain seharian!',
-      rating: 5,
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80',
-    },
-    {
-      id: 2,
-      name: 'Ibu Rizky Amalia',
-      role: 'Kunjungan Edukasi Sekolah (Jakarta)',
-      text: 'Kami mengadakan gathering di sini, dan areanya luas sekali. Anak-anak sangat gembira bisa terapi ikan gratis, bermain trampolin, serta mendapat edukasi langsung budidaya ikan nila dan gurame dari ahlinya. Sangat edukatif!',
+      text: 'Tempatnya nyaman banget, cocok untuk liburan keluarga! Suasananya asri dan adem, anak-anak senang banget bisa main di area bermain sambil lihat kolam ikan. Pasti balik lagi!',
       rating: 5,
       avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=80',
     },
     {
+      id: 2,
+      name: 'Bapak Roni Fauzan',
+      role: 'Komunitas Mancing (Karawang)',
+      text: 'Suasananya adem, banyak spot foto yang bagus, dan makanannya enak! Kami sekeluarga sangat menikmati waktu di sini. Area pemancingannya juga luas dan nyaman. Recommended!',
+      rating: 5,
+      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80',
+    },
+    {
       id: 3,
-      name: 'Bapak Siti Maryam',
-      role: 'Hobi & Kuliner (Karawang)',
-      text: 'Sangat cocok untuk makan bersama rekan kerja atau keluarga sambil menikmati ketenangan kolam. Pemancingannya luas dan ikannya responsif sekali saat dipancing. Gurame bakar asam manisnya luar biasa lezat!',
+      name: 'Ibu Dewi Kusuma',
+      role: 'Gathering Komunitas (Jakarta)',
+      text: 'Pelayanannya ramah dan tempatnya bersih. Kami mengadakan gathering komunitas di sini dan semua berjalan lancar. Areanya luas, tempatnya asri, dan harganya terjangkau. Sangat direkomendasikan!',
       rating: 5,
       avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=150&h=150&q=80',
     }
@@ -42,6 +42,7 @@ export default function Testimonials() {
             transition={{ duration: 0.5 }}
             className="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider"
           >
+            <Sparkles size={12} />
             Kata Pengunjung Kami
           </motion.div>
           <motion.h2
@@ -51,7 +52,7 @@ export default function Testimonials() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="font-display text-3xl sm:text-4xl font-extrabold text-gray-900 mt-3 tracking-tight"
           >
-            Testimoni & Kesan Ceria
+            Testimoni & Kesan Pengunjung
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 15 }}
@@ -60,7 +61,7 @@ export default function Testimonials() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-gray-500 mt-4 font-light text-sm sm:text-base leading-relaxed"
           >
-            Lebih dari ribuan pengunjung telah menikmati akhir pekan yang tenang dan mengesankan. Berikut penuturan jujur dari mereka.
+            Ribuan pengunjung telah merasakan pengalaman wisata yang menyenangkan dan berkesan. Berikut penuturan jujur dari mereka.
           </motion.p>
         </div>
 

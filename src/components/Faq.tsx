@@ -14,28 +14,28 @@ export default function Faq() {
   const faqs: FaqItem[] = [
     {
       id: 1,
-      question: 'Apakah tersedia area parkir?',
-      answer: 'Ya, kami menyediakan area parkir kendaraan yang luas, aman, dan tertata rapi baik untuk sepeda motor, mobil pribadi, hingga bus pariwisata. Area parkir juga diawasi oleh petugas keamanan kami.'
+      question: 'Apakah tersedia area parkir kendaraan?',
+      answer: 'Ya, tersedia area parkir kendaraan yang memadai baik untuk sepeda motor maupun mobil pribadi. Parkir tersedia di dalam area wisata sehingga kunjungan Anda semakin nyaman dan aman.'
     },
     {
       id: 2,
-      question: 'Apakah bisa memancing dan menyewa alat pancing?',
-      answer: 'Tentu saja! Kami memiliki kolam pemancingan yang luas berisi aneka ikan tawar segar (Gurame, Nila, Lele, Patin, dll). Anda dapat membawa alat pancing sendiri atau menyewa peralatan pancing lengkap beserta umpannya di toko pemancingan yang tersedia di lokasi.'
+      question: 'Apakah Wisata Ikan Sungai Rindu cocok untuk anak-anak?',
+      answer: 'Ya, sangat cocok! Wisata Ikan Sungai Rindu dirancang untuk wisata keluarga dan sangat ramah anak. Tersedia area bermain anak yang aman dan menyenangkan, serta suasana alam yang nyaman untuk seluruh keluarga termasuk balita hingga anak-anak.'
     },
     {
       id: 3,
-      question: 'Apakah tersedia tempat makan saung dan restoran?',
-      answer: 'Ya, Wisata Ikan Tarumajaya terkenal dengan restoran saung bambu lesehan terapung di atas kolam. Pengunjung dapat menikmati sensasi makan lesehan sambil melihat hilir mudik ikan air tawar. Kami menyediakan berbagai menu olahan ikan bakar/goreng segar, ayam, bebek, sop iga, sayuran, dan paket makanan keluarga besar.'
+      question: 'Apakah bisa digunakan untuk gathering atau acara kelompok?',
+      answer: 'Ya, tersedia area yang cukup luas dan representatif untuk gathering keluarga besar, komunitas, arisan, reuni sekolah, ulang tahun, acara perusahaan, dan berbagai kegiatan kelompok lainnya. Hubungi kami via WhatsApp untuk informasi ketersediaan dan paket gathering.'
     },
     {
       id: 4,
-      question: 'Apakah tempat wisata ini cocok untuk dikunjungi anak-anak?',
-      answer: 'Sangat cocok! Kami memiliki konsep rekreasi keluarga yang sangat ramah anak. Terdapat area khusus Wahana Bermain Anak (playground) yang lengkap dengan trampolin, mandi bola, perosotan, skuter, mobil-mobilan, serta terapi ikan gratis yang asyik bagi anak-anak untuk melatih kepekaan motorik mereka.'
+      question: 'Apakah tersedia tempat makan dan kuliner di lokasi?',
+      answer: 'Ya, tersedia area kuliner dengan berbagai menu pilihan. Nikmati hidangan berbahan dasar ikan segar dan menu pilihan lainnya sambil menikmati suasana alam yang asri dan menyegarkan selera.'
     },
     {
       id: 5,
-      question: 'Apakah bisa menyewa tempat untuk mengadakan acara kustom?',
-      answer: 'Ya, area kami sangat luas dan memadai untuk menyelenggarakan berbagai macam acara formal maupun informal seperti ulang tahun, reuni sekolah, arisan keluarga, gathering korporat, rapat kerja, arisan, hingga resepsi pernikahan bertema outdoor/semi-outdoor. Silakan hubungi CS kami via WhatsApp untuk mendapatkan harga paket spesial.'
+      question: 'Berapa jam operasional Wisata Ikan Sungai Rindu?',
+      answer: 'Wisata Ikan Sungai Rindu buka setiap hari selama 24 jam. Untuk informasi lebih lanjut mengenai layanan dan fasilitas di waktu tertentu, silakan hubungi kami via WhatsApp di 0877-6094-3079.'
     },
   ];
 
@@ -74,7 +74,7 @@ export default function Faq() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-gray-500 mt-4 font-light text-sm sm:text-base leading-relaxed"
           >
-            Masih ragu atau butuh informasi cepat? Temukan jawaban atas pertanyaan paling umum yang ditanyakan oleh calon pengunjung kami di bawah ini.
+            Masih ragu atau butuh informasi cepat? Temukan jawaban atas pertanyaan yang paling sering ditanyakan pengunjung kami di bawah ini.
           </motion.p>
         </div>
 

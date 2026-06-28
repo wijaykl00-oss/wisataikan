@@ -3,70 +3,62 @@ import {
   Heart, 
   Leaf, 
   MapPin, 
-  Compass, 
-  Sparkles, 
   Camera, 
   Car, 
   Maximize, 
-  Smile, 
-  Award 
+  Fish,
+  Users
 } from 'lucide-react';
 
 export default function Features() {
   const strengths = [
     {
-      title: 'Suasana Sejuk & Asri',
-      description: 'Dikelilingi tanaman hijau rindang dan hamparan kolam tenang yang memberikan udara sejuk alami dan damai.',
+      title: 'Suasana Alam Sejuk & Nyaman',
+      description: 'Dikelilingi pepohonan rindang dan hamparan kolam yang tenang, memberikan udara segar alami yang menenangkan dan menyegarkan jiwa.',
       icon: <Leaf className="text-emerald-600" size={24} />,
       bgColor: 'bg-emerald-50 border-emerald-100',
     },
     {
-      title: 'Saung Bambu Estetik',
-      description: 'Menyantap hidangan lezat di atas saung bambu apung tradisional yang memberikan sensasi bersantap unik.',
-      icon: <Award className="text-amber-600" size={24} />,
-      bgColor: 'bg-amber-50 border-amber-100',
-    },
-    {
-      title: 'Pemancingan Keluarga Luas',
-      description: 'Kolam pemancingan berkapasitas besar dengan pilihan spesies ikan melimpah untuk hiburan akhir pekan Anda.',
-      icon: <Compass className="text-sky-600" size={24} />,
-      bgColor: 'bg-sky-50 border-sky-100',
-    },
-    {
-      title: 'Edukasi Budidaya Riil',
-      description: 'Belajar langsung proses pembenihan, pembesaran, hingga panen ikan air tawar bersama praktisi kami.',
-      icon: <Sparkles className="text-purple-600" size={24} />,
-      bgColor: 'bg-purple-50 border-purple-100',
-    },
-    {
-      title: 'Bibit & Ikan Segar Garansi',
-      description: 'Dapatkan bibit ikan unggulan berdaya tahan tinggi atau ikan konsumsi super segar langsung ditangkap di tempat.',
+      title: 'Cocok untuk Semua Keluarga',
+      description: 'Tempat wisata ramah keluarga yang nyaman untuk semua usia — dari balita hingga lansia. Suasana bersahabat dan fasilitas lengkap untuk kenyamanan Anda.',
       icon: <Heart className="text-rose-600" size={24} />,
       bgColor: 'bg-rose-50 border-rose-100',
     },
     {
-      title: 'Wahana Bermain Anak Terintegrasi',
-      description: 'Mulai dari perosotan hingga trampolin tersedia untuk menjaga si kecil tetap aktif, gembira, dan bersosialisasi.',
-      icon: <Smile className="text-orange-600" size={24} />,
-      bgColor: 'bg-orange-50 border-orange-100',
+      title: 'Area Pemancingan Luas',
+      description: 'Kolam pemancingan berisi ikan air tawar yang melimpah. Nikmati keseruan memancing bersama keluarga atau rekan dalam suasana alam yang tenang.',
+      icon: <Fish className="text-sky-600" size={24} />,
+      bgColor: 'bg-sky-50 border-sky-100',
     },
     {
-      title: 'Spot Foto Instagramable',
-      description: 'Berbagai dekorasi alamiah, jembatan kayu di atas kolam, dan lanskap saung apung yang cantik untuk album foto Anda.',
+      title: 'Banyak Spot Foto Menarik',
+      description: 'Berbagai spot foto instagramable dengan latar alam hijau yang indah. Abadikan setiap momen berharga bersama orang-orang tersayang.',
       icon: <Camera className="text-indigo-600" size={24} />,
       bgColor: 'bg-indigo-50 border-indigo-100',
     },
     {
-      title: 'Parkir Luas & Aman',
-      description: 'Area parkir mobil dan motor memadai yang dijaga oleh tim keamanan terlatih demi kenyamanan kunjungan Anda.',
+      title: 'Area Luas & Lapang',
+      description: 'Lahan yang luas memberikan kebebasan bergerak dan beraktivitas. Cocok untuk rombongan besar, family gathering, maupun kunjungan santai.',
+      icon: <Maximize className="text-teal-600" size={24} />,
+      bgColor: 'bg-teal-50 border-teal-100',
+    },
+    {
+      title: 'Parkir Kendaraan Tersedia',
+      description: 'Tersedia area parkir yang memadai untuk kendaraan roda dua maupun roda empat, sehingga kunjungan Anda semakin nyaman dan bebas khawatir.',
       icon: <Car className="text-gray-600" size={24} />,
       bgColor: 'bg-gray-100 border-gray-200',
     },
     {
-      title: 'Sewa Tempat Fleksibel',
-      description: 'Lahan lapang dengan tata letak adaptif untuk rapat formal, acara arisan, gathering korporat, hingga pernikahan.',
-      icon: <Maximize className="text-teal-600" size={24} />,
-      bgColor: 'bg-teal-50 border-teal-100',
+      title: 'Lokasi Mudah Dijangkau',
+      description: 'Berlokasi strategis di Hurip Jaya, Babelan, Bekasi — mudah diakses dari berbagai penjuru Bekasi dan sekitarnya dengan kendaraan pribadi maupun umum.',
+      icon: <MapPin className="text-amber-600" size={24} />,
+      bgColor: 'bg-amber-50 border-amber-100',
+    },
+    {
+      title: 'Cocok untuk Gathering & Acara',
+      description: 'Area yang representatif untuk gathering keluarga, acara komunitas, arisan, reuni sekolah, ulang tahun, hingga kegiatan kelompok lainnya dengan kapasitas besar.',
+      icon: <Users className="text-purple-600" size={24} />,
+      bgColor: 'bg-purple-50 border-purple-100',
     },
   ];
 
@@ -92,7 +84,7 @@ export default function Features() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="font-display text-3xl sm:text-4xl font-extrabold text-gray-900 mt-3 tracking-tight"
           >
-            10 Keunggulan Wisata Ikan Tarumajaya
+            Keunggulan Wisata Ikan Sungai Rindu
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 15 }}
@@ -101,7 +93,7 @@ export default function Features() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-gray-500 mt-4 font-light text-sm sm:text-base leading-relaxed"
           >
-            Kami mendedikasikan kenyamanan penuh bagi setiap pengunjung lewat perpaduan fasilitas prima dan keindahan alam pedesaan yang menawan.
+            Kami hadir sebagai destinasi wisata alam yang memberikan pengalaman terbaik — nyaman, asri, dan penuh kenangan bagi seluruh keluarga Anda.
           </motion.p>
         </div>
 

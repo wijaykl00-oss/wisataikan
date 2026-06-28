@@ -1,5 +1,5 @@
 import React from 'react';
-import { Compass, Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Compass, Phone, MapPin, Clock, Fish } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -22,27 +22,27 @@ export default function Footer() {
           {/* Col 1: Brand details (4 cols) */}
           <div className="lg:col-span-4 space-y-5">
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-600 via-teal-600 to-amber-700 flex items-center justify-center text-white shadow-md shadow-emerald-500/10">
-                <Compass size={22} className="animate-spin-slow" />
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 via-teal-500 to-blue-600 flex items-center justify-center text-white shadow-md shadow-emerald-500/10">
+                <Fish size={22} />
               </div>
               <div className="flex flex-col">
                 <span className="font-display font-bold text-white text-base leading-tight tracking-tight">
                   Wisata Ikan
                 </span>
                 <span className="font-sans font-semibold text-emerald-500 text-xs tracking-wider">
-                  TARUMAJAYA
+                  SUNGAI RINDU
                 </span>
               </div>
             </div>
             
             <p className="text-xs sm:text-sm text-gray-400 font-light leading-relaxed">
-              Destinasi rekreasi keluarga terpadu di Bekasi yang menggabungkan asrinya saung bambu apung, kelezatan kuliner khas ikan tawar segar, kolam pemancingan luas, terapi kesehatan alami, serta wahana bermain anak.
+              Destinasi wisata keluarga yang menawarkan suasana alam yang asri dengan kolam ikan, area pemancingan, tempat bersantai, dan kuliner lezat khas pedesaan yang nyaman di Babelan, Bekasi.
             </p>
 
             <div className="flex gap-4 pt-1">
-              <span className="text-xs text-emerald-400 font-semibold">• Nyaman</span>
-              <span className="text-xs text-teal-400 font-semibold">• Edukatif</span>
-              <span className="text-xs text-amber-500 font-semibold">• Lezat</span>
+              <span className="text-xs text-emerald-400 font-semibold">• Asri</span>
+              <span className="text-xs text-teal-400 font-semibold">• Keluarga</span>
+              <span className="text-xs text-blue-400 font-semibold">• Nyaman</span>
             </div>
           </div>
 
@@ -54,7 +54,7 @@ export default function Footer() {
             <ul className="space-y-2.5 text-xs">
               <li>
                 <a href="#beranda" onClick={(e) => handleScrollTo(e, '#beranda')} className="hover:text-emerald-500 transition-colors">
-                  Beranda Wisata
+                  Beranda
                 </a>
               </li>
               <li>
@@ -84,7 +84,7 @@ export default function Footer() {
               </li>
               <li>
                 <a href="#faq" onClick={(e) => handleScrollTo(e, '#faq')} className="hover:text-emerald-500 transition-colors">
-                  F.A.Q
+                  FAQ
                 </a>
               </li>
             </ul>
@@ -100,19 +100,19 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="text-emerald-500 shrink-0" size={16} />
                 <span className="leading-relaxed">
-                  Jl. Mutiara Gading Raya, Setia Asih, Kecamatan Tarumajaya, Kabupaten Bekasi, Jawa Barat 17215.
+                  Kp. Sembilangan RT 06 / RW 04, Hurip Jaya, Kecamatan Babelan, Kabupaten Bekasi, Jawa Barat.
                 </span>
               </li>
               
               <li className="flex items-center gap-3">
                 <Phone className="text-emerald-500 shrink-0" size={16} />
-                <span>+62 813-8836-4632 (Customer Service)</span>
+                <span>+62 877-6094-3079 (Customer Service)</span>
               </li>
 
               <li className="flex items-start gap-3">
                 <Clock className="text-emerald-500 shrink-0" size={16} />
                 <span>
-                  Setiap Hari: <strong className="text-white font-medium">08.00 - 21.00 WIB</strong>
+                  Setiap Hari: <strong className="text-white font-medium">Buka 24 Jam</strong>
                 </span>
               </li>
             </ul>
@@ -120,7 +120,7 @@ export default function Footer() {
             {/* Quick map button */}
             <div className="pt-2">
               <a
-                href="https://maps.google.com/?q=Wisata+Ikan+Tarumajaya"
+                href="https://maps.google.com/?q=Wisata+Ikan+Sungai+Rindu+Babelan"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 text-white text-xs font-semibold py-2 px-4 rounded-xl border border-white/10 transition-colors"
@@ -135,7 +135,7 @@ export default function Footer() {
         {/* Bottom footer credit */}
         <div className="pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs font-light">
           <p className="text-center sm:text-left">
-            &copy; {currentYear} <span className="text-white font-medium">Wisata Ikan Tarumajaya</span>. Hak Cipta Dilindungi Undang-Undang.
+            &copy; {currentYear} <span className="text-white font-medium">Wisata Ikan Sungai Rindu</span>. Hak Cipta Dilindungi Undang-Undang.
           </p>
           <div className="flex gap-6">
             <a href="#app-header" className="hover:text-emerald-500 transition-colors">
