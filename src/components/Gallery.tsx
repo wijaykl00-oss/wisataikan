@@ -2,10 +2,15 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, ZoomIn, ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
 
-import imgHero from '../assets/images/fotojembatan1.webp';
-import imgKolam from '../assets/images/foto2.jpeg';
-import imgKuliner from '../assets/images/foto3.jpeg';
-import imgWahana from '../assets/images/foto4.jpeg';
+import img1 from '../assets/images/fotojembatan1.webp';
+import img2 from '../assets/images/fotojembatan2.webp';
+import img3 from '../assets/images/fotojembatan3.webp';
+import img4 from '../assets/images/pemandangan1.webp';
+import img5 from '../assets/images/sungai.jpeg';
+import img6 from '../assets/images/tempatmakan.webp';
+import img7 from '../assets/images/keluarga.jpeg';
+import img8 from '../assets/images/customer1.jpeg';
+import img9 from '../assets/images/customer2.jpeg';
 
 export default function Gallery() {
   const [activeCategory, setActiveCategory] = useState<'semua' | 'alam' | 'aktivitas' | 'kuliner'>('semua');
@@ -22,72 +27,65 @@ export default function Gallery() {
     {
       id: 1,
       category: 'alam',
-      title: 'Gerbang Wisata Sungai Rindu',
-      description: 'Gerbang selamat datang yang asri menyambut setiap pengunjung dengan nuansa alam yang sejuk dan segar.',
-      imageUrl: 'https://images.unsplash.com/photo-1546548970-71785318a17b?auto=format&fit=crop&w=800&q=80',
+      title: 'Pemandangan Jembatan',
+      description: 'Pemandangan indah jembatan dengan nuansa alam yang menyejukkan.',
+      imageUrl: img1,
     },
     {
       id: 2,
-      category: 'alam',
-      title: 'Kolam Ikan yang Jernih',
-      description: 'Hamparan kolam ikan yang jernih dan tenang dikelilingi pepohonan hijau yang rindang — pemandangan yang menyegarkan.',
-      imageUrl: imgHero,
+      category: 'aktivitas',
+      title: 'Suasana Kolam Ikan',
+      description: 'Keseruan di sekitar kolam ikan yang jernih dan tenang.',
+      imageUrl: img2,
     },
     {
       id: 3,
       category: 'alam',
-      title: 'Suasana Alam Pedesaan',
-      description: 'Nuansa alam pedesaan yang autentik dan menenangkan, jauh dari hiruk-pikuk perkotaan namun mudah dijangkau.',
-      imageUrl: 'https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=800&q=80',
+      title: 'Spot Foto Instagramable',
+      description: 'Berbagai spot foto dengan latar alam yang indah dan natural.',
+      imageUrl: img3,
     },
     {
       id: 4,
-      category: 'kuliner',
-      title: 'Area Kuliner Segar',
-      description: 'Sajian kuliner berbahan dasar ikan segar dan menu pilihan lainnya yang lezat dengan suasana makan di alam terbuka.',
-      imageUrl: imgKuliner,
+      category: 'alam',
+      title: 'Pemandangan',
+      description: 'Nuansa alam yang hijau dan asri, memberikan ketenangan.',
+      imageUrl: img4,
     },
     {
       id: 5,
-      category: 'aktivitas',
-      title: 'Area Pemancingan',
-      description: 'Keseruan memancing bersama keluarga di kolam yang luas dengan stok ikan melimpah — pengalaman yang menyenangkan untuk semua usia.',
-      imageUrl: imgKolam,
+      category: 'alam',
+      title: 'Aliran Sungai',
+      description: 'Aliran sungai yang tenang dikelilingi pepohonan hijau rindang.',
+      imageUrl: img5,
     },
     {
       id: 6,
-      category: 'aktivitas',
-      title: 'Area Bermain Anak',
-      description: 'Area bermain yang aman dan menyenangkan khusus untuk si kecil agar tetap aktif dan bahagia selama berkunjung.',
-      imageUrl: imgWahana,
+      category: 'kuliner',
+      title: 'Gazebo & Tempat Makan',
+      description: 'Gazebo yang nyaman untuk bersantai sambil menikmati kuliner.',
+      imageUrl: img6,
     },
     {
       id: 7,
       category: 'aktivitas',
-      title: 'Spot Foto Instagramable',
-      description: 'Berbagai spot foto dengan latar alam yang indah dan natural. Abadikan momen terbaik bersama keluarga dan sahabat.',
-      imageUrl: 'https://images.unsplash.com/photo-1501555088652-021faa106b9b?auto=format&fit=crop&w=800&q=80',
+      title: 'Gathering Keluarga',
+      description: 'Area yang luas dan representatif untuk gathering keluarga.',
+      imageUrl: img7,
     },
     {
       id: 8,
       category: 'aktivitas',
-      title: 'Gathering & Kebersamaan',
-      description: 'Area yang luas dan representatif untuk gathering keluarga besar, komunitas, atau kelompok dalam suasana alam yang nyaman.',
-      imageUrl: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80',
+      title: 'Pengunjung Ceria',
+      description: 'Keceriaan pengunjung menikmati fasilitas di Sungai Rindu.',
+      imageUrl: img8,
     },
     {
       id: 9,
       category: 'aktivitas',
-      title: 'Gazebo & Tempat Bersantai',
-      description: 'Gazebo yang nyaman untuk bersantai menikmati suasana alam sambil beristirahat dari aktivitas wisata yang seru.',
-      imageUrl: 'https://images.unsplash.com/photo-1596422846543-75c6fc18a523?auto=format&fit=crop&w=800&q=80',
-    },
-    {
-      id: 10,
-      category: 'alam',
-      title: 'Hijau Alam Sungai Rindu',
-      description: 'Panorama alam yang hijau dan asri, dengan angin sepoi-sepoi yang membuat setiap kunjungan terasa istimewa dan berkesan.',
-      imageUrl: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80',
+      title: 'Momen Bahagia',
+      description: 'Abadikan momen terbaik bersama keluarga dan sahabat.',
+      imageUrl: img9,
     }
   ];
 

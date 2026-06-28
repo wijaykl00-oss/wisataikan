@@ -16,7 +16,7 @@ import imgKolam from '../assets/images/fotojembatan2.webp';
 import imgGazebo from '../assets/images/tempatmakan.webp';
 import imgKuliner from '../assets/images/customer2.jpeg';
 import imgSpotFoto from '../assets/images/fotojembatan3.webp';
-import imgBermainAnak from '../assets/images/sungai.jpeg';
+import imgPemandangan from '../assets/images/pemandangan1.webp';
 import imgGathering from '../assets/images/customer1.jpeg';
 
 export default function Services() {
@@ -67,12 +67,12 @@ export default function Services() {
       price: 'Hubungi Kami'
     },
     {
-      id: 'bermain-anak',
-      title: 'Area Bermain Anak',
-      description: 'Surganya keceriaan untuk si kecil! Area bermain anak yang aman dan menyenangkan agar buah hati Anda tetap aktif, bahagia, dan terhibur selama berkunjung.',
-      icon: <Smile className="text-rose-500" size={24} />,
-      image: imgBermainAnak,
-      badge: 'Khusus Anak',
+      id: 'pemandangan',
+      title: 'Pemandangan',
+      description: 'Saksikan keindahan panorama alam yang hijau dan asri di sepanjang Sungai Rindu. Tempat yang sempurna untuk menenangkan pikiran dan menikmati suasana pedesaan.',
+      icon: <Trees className="text-emerald-500" size={24} />,
+      image: imgPemandangan,
+      badge: 'Asri',
       price: 'Hubungi Kami'
     },
     {
