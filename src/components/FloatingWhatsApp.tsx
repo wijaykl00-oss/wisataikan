@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { MessageCircle, X, Send, User } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import { openWhatsApp } from '../utils/whatsapp';
+
 
 const WA_NUMBER = '6287760943079';
 const DEFAULT_MESSAGE = 'Halo Wisata Ikan Sungai Rindu 🌿, saya tertarik untuk berkunjung bersama keluarga. Bisakah dibantu informasi lebih lanjut?';
@@ -24,9 +26,9 @@ export default function FloatingWhatsApp({ message }: FloatingWhatsAppProps) {
   const handleSend = (e: React.FormEvent) => {
     e.preventDefault();
     const text = inputMessage.trim()
-      ? encodeURIComponent(inputMessage)
-      : encodeURIComponent(message || DEFAULT_MESSAGE);
-    window.open(`https://wa.me/${WA_NUMBER}?text=${text}`, '_blank');
+      ? inputMessage
+      : (message || DEFAULT_MESSAGE);
+    openWhatsApp(WA_NUMBER, text);
     setIsOpen(false);
     setInputMessage('');
   };

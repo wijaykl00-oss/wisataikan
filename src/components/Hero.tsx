@@ -1,8 +1,14 @@
 import { motion } from 'motion/react';
 import { ArrowRight, MapPin, Sparkles, Trees, Fish, Users } from 'lucide-react';
+import { useWhatsAppLink } from '../utils/whatsapp';
+
 import heroImg from '../assets/images/fotojembatan1.webp';
 
 export default function Hero() {
+  const waLink = useWhatsAppLink(
+    '6287760943079',
+    'Halo Wisata Ikan Sungai Rindu, saya tertarik untuk berkunjung. Bisakah dibantu informasinya?'
+  );
   const handleScrollTo = (id: string) => {
     const element = document.querySelector(id);
     if (element) {
@@ -67,10 +73,11 @@ export default function Hero() {
           >
             <a
               id="cta-hubungi"
-              href="https://wa.me/6287760943079?text=Halo%20Wisata%20Ikan%20Sungai%20Rindu%2C%20saya%20tertarik%20untuk%20berkunjung.%20Bisakah%20dibantu%20informasinya%3F"
+              href={waLink}
               target="_blank"
               rel="noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-[#047857] hover:bg-[#065F46] text-white font-sans font-bold text-sm tracking-wide shadow-lg shadow-emerald-700/20 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-0.5 group"
+
             >
               Hubungi Kami
               <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
@@ -78,7 +85,7 @@ export default function Hero() {
 
             <a
               id="cta-lokasi"
-              href="https://maps.google.com/?q=Wisata+Ikan+Sungai+Rindu+Babelan"
+              href="https://www.google.com/maps?q=-6.075287,107.006628"
               target="_blank"
               rel="noreferrer"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 rounded-xl bg-white hover:bg-slate-50 border border-[#E2E8F0] text-[#0F172A] font-sans font-bold text-sm tracking-wide shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-0.5"

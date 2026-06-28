@@ -1,7 +1,13 @@
 import { motion } from 'motion/react';
 import { Calendar, Clock, Sparkles, MapPin, Smile, Users, Fish } from 'lucide-react';
+import { useWhatsAppLink } from '../utils/whatsapp';
+
 
 export default function About() {
+  const waLink = useWhatsAppLink(
+    '6287760943079',
+    'Halo Wisata Ikan Sungai Rindu, saya ingin bertanya informasi lebih lanjut.'
+  );
   const stats = [
     { label: 'Pengunjung Ceria', value: '5.000+', icon: <Smile className="text-emerald-500" size={20} /> },
     { label: 'Jenis Layanan', value: '7+', icon: <Fish className="text-teal-500" size={20} /> },
@@ -140,15 +146,16 @@ export default function About() {
 
                 <div className="pt-4 flex flex-col gap-3">
                   <a
-                    href="https://wa.me/6287760943079?text=Halo%20Wisata%20Ikan%20Sungai%20Rindu%2C%20saya%20ingin%20bertanya%20informasi%20lebih%20lanjut."
+                    href={waLink}
                     target="_blank"
                     rel="noreferrer"
                     className="w-full py-3.5 px-4 bg-white hover:bg-emerald-50 text-emerald-800 font-sans font-bold text-xs rounded-xl tracking-wider uppercase transition-colors shadow-md shadow-emerald-950/20 text-center"
+
                   >
                     Hubungi Kami via WhatsApp
                   </a>
                   <a
-                    href="https://maps.google.com/?q=Wisata+Ikan+Sungai+Rindu+Babelan"
+                    href="https://www.google.com/maps?q=-6.075287,107.006628"
                     target="_blank"
                     rel="noreferrer"
                     className="w-full py-3 px-4 bg-white/10 hover:bg-white/20 text-white font-sans font-bold text-xs rounded-xl tracking-wider uppercase transition-colors text-center border border-white/20"

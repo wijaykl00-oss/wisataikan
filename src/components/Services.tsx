@@ -1,4 +1,6 @@
 import { motion } from 'motion/react';
+import { useWhatsAppLink, openWhatsApp } from '../utils/whatsapp';
+
 import { 
   Utensils, 
   Sparkles, 
@@ -87,8 +89,8 @@ export default function Services() {
   ];
 
   const handleBook = (title: string) => {
-    const text = encodeURIComponent(`Halo Wisata Ikan Sungai Rindu, saya tertarik bertanya tentang layanan: ${title}. Mohon informasinya.`);
-    window.open(`https://wa.me/6287760943079?text=${text}`, '_blank');
+    const text = `Halo Wisata Ikan Sungai Rindu, saya tertarik bertanya tentang layanan: ${title}. Mohon informasinya.`;
+    openWhatsApp('6287760943079', text);
   };
 
   return (

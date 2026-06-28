@@ -120,7 +120,7 @@ export default function Footer() {
             {/* Quick map button */}
             <div className="pt-2">
               <a
-                href="https://maps.google.com/?q=Wisata+Ikan+Sungai+Rindu+Babelan"
+                href="https://www.google.com/maps?q=-6.075287,107.006628"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 text-white text-xs font-semibold py-2 px-4 rounded-xl border border-white/10 transition-colors"

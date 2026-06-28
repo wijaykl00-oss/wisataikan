@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Phone, Fish } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import { useWhatsAppLink } from '../utils/whatsapp';
 
 export default function Navbar() {
+  const waLink = useWhatsAppLink(
+    '6287760943079',
+    'Halo Wisata Ikan Sungai Rindu, saya tertarik untuk berkunjung. Bisakah dibantu informasinya?'
+  );
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -85,10 +90,11 @@ export default function Navbar() {
 
               {/* Header CTA */}
               <a
-                href="https://wa.me/6287760943079?text=Halo%20Wisata%20Ikan%20Sungai%20Rindu%2C%20saya%20tertarik%20untuk%20berkunjung.%20Bisakah%20dibantu%20informasinya%3F"
+                href={waLink}
                 target="_blank"
                 rel="noreferrer"
                 className="flex items-center gap-2 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-sans text-xs font-semibold py-2.5 px-4 rounded-full shadow-md shadow-emerald-600/20 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5"
+
               >
                 <Phone size={14} />
                 Hubungi Kami
@@ -168,10 +174,11 @@ export default function Navbar() {
               {/* Mobile CTA */}
               <div className="pt-6 border-t border-gray-100">
                 <a
-                  href="https://wa.me/6287760943079?text=Halo%20Wisata%20Ikan%20Sungai%20Rindu%2C%20saya%20tertarik%20untuk%20berkunjung.%20Bisakah%20dibantu%20informasinya%3F"
+                  href={waLink}
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-sans font-bold py-3 px-4 rounded-xl shadow-md"
+
                 >
                   <Phone size={16} />
                   Hubungi CS Kami

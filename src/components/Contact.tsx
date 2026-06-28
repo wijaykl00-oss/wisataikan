@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
+import { useWhatsAppLink, openWhatsApp } from '../utils/whatsapp';
+
 import { 
   Phone, 
   MapPin, 
@@ -9,6 +11,10 @@ import {
 } from 'lucide-react';
 
 export default function Contact() {
+  const waLink = useWhatsAppLink(
+    '6287760943079',
+    'Halo Wisata Ikan Sungai Rindu, saya ingin bertanya informasi lebih lanjut.'
+  );
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -70,13 +76,10 @@ ${formData.notes ? `• *Catatan Tambahan*: ${formData.notes}` : ''}
 
 Mohon informasi ketersediaan dan detail lebih lanjut. Terima kasih! 🙏`;
 
-    const encodedText = encodeURIComponent(waText);
-    const phoneNumber = '6287760943079';
-    
     setIsSuccess(true);
     
     setTimeout(() => {
-      window.open(`https://wa.me/${phoneNumber}?text=${encodedText}`, '_blank');
+      openWhatsApp('6287760943079', waText);
       setIsSuccess(false);
     }, 1200);
   };
@@ -145,7 +148,7 @@ Mohon informasi ketersediaan dan detail lebih lanjut. Terima kasih! 🙏`;
                     Kp. Sembilangan RT 06/RW 04, Hurip Jaya, Babelan, Bekasi
                   </p>
                   <a 
-                    href="https://maps.google.com/?q=Wisata+Ikan+Sungai+Rindu+Babelan"
+                    href="https://www.google.com/maps?q=-6.075287,107.006628"
                     target="_blank"
                     rel="noreferrer"
                     className="inline-block text-[11px] text-amber-800 font-bold hover:underline"
@@ -175,7 +178,7 @@ Mohon informasi ketersediaan dan detail lebih lanjut. Terima kasih! 🙏`;
             <div className="bg-white p-4 rounded-3xl border border-gray-100 shadow-sm overflow-hidden h-[360px] relative">
               <iframe
                 title="Google Maps Wisata Ikan Sungai Rindu Babelan"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.1!2d107.0!3d-6.17!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNsKwMTAnMTIuMCJTIDEwN8KwMDAnMDAuMCJF!5e0!3m2!1sid!2sid!4v1719412345678!5m2!1sid!2sid"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3967.4102434144147!2d107.00662817421384!3d-6.075287493910798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6a26b5fbc2dca9%3A0xb5aba146873a9b2d!2sW2F5%2BVMP%2C%20Hruip%20Jaya%2C%20Kec.%20Babelan%2C%20Kabupaten%20Bekasi%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1782613327514!5m2!1sid!2sid"
                 className="w-full h-full rounded-2xl border-0"
                 allowFullScreen={false}
                 loading="lazy"
@@ -190,10 +193,11 @@ Mohon informasi ketersediaan dan detail lebih lanjut. Terima kasih! 🙏`;
                 <p className="text-[11px] text-emerald-200 font-light mt-0.5">Kami siap membantu reservasi, info harga, dan paket wisata Anda.</p>
               </div>
               <a
-                href="https://wa.me/6287760943079?text=Halo%20Wisata%20Ikan%20Sungai%20Rindu%2C%20saya%20ingin%20bertanya%20informasi%20lebih%20lanjut."
+                href={waLink}
                 target="_blank"
                 rel="noreferrer"
                 className="shrink-0 flex items-center gap-2 bg-white text-emerald-800 font-sans font-bold text-xs py-2.5 px-4 rounded-xl shadow-sm hover:bg-emerald-50 transition-colors whitespace-nowrap"
+
               >
                 <Phone size={14} />
                 Chat WhatsApp
