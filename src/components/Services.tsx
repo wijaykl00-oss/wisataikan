@@ -11,9 +11,13 @@ import {
   Trees
 } from 'lucide-react';
 
-import imgKolam from '../assets/images/foto2.jpeg';
-import imgKuliner from '../assets/images/foto3.jpeg';
-import imgWahana from '../assets/images/foto4.jpeg';
+import imgKeluarga from '../assets/images/keluarga.jpeg';
+import imgKolam from '../assets/images/fotojembatan2.webp';
+import imgGazebo from '../assets/images/tempatmakan.webp';
+import imgKuliner from '../assets/images/customer2.jpeg';
+import imgSpotFoto from '../assets/images/fotojembatan3.webp';
+import imgBermainAnak from '../assets/images/sungai.jpeg';
+import imgGathering from '../assets/images/customer1.jpeg';
 
 export default function Services() {
   const services = [
@@ -22,7 +26,7 @@ export default function Services() {
       title: 'Area Wisata Keluarga',
       description: 'Nikmati suasana alam yang asri bersama keluarga di area wisata yang luas, sejuk, dan nyaman. Cocok untuk semua usia — dari anak-anak hingga orang tua.',
       icon: <Trees className="text-emerald-500" size={24} />,
-      image: 'https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=800&q=80',
+      image: imgKeluarga,
       badge: 'Terfavorit',
       price: 'Hubungi Kami'
     },
@@ -38,9 +42,9 @@ export default function Services() {
     {
       id: 'gazebo',
       title: 'Gazebo / Tempat Bersantai',
-      description: 'Bersantai di gazebo kami yang nyaman di tengah suasana alam yang hijau dan sejuk. Tempat ideal untuk melepas penat sambil menikmati pemandangan kolam.',
+      description: 'Bersantai di gazebo kami yang nyaman di tengah suasana alam yang hijau and sejuk. Tempat ideal untuk melepas penat sambil menikmati pemandangan kolam.',
       icon: <Tent className="text-teal-500" size={24} />,
-      image: 'https://images.unsplash.com/photo-1596422846543-75c6fc18a523?auto=format&fit=crop&w=800&q=80',
+      image: imgGazebo,
       badge: 'Nyaman',
       price: 'Hubungi Kami'
     },
@@ -58,7 +62,7 @@ export default function Services() {
       title: 'Spot Foto',
       description: 'Abadikan momen terbaik bersama orang-orang tersayang di berbagai spot foto instagramable yang didesain dengan latar alam yang indah dan natural.',
       icon: <Camera className="text-indigo-500" size={24} />,
-      image: 'https://images.unsplash.com/photo-1501555088652-021faa106b9b?auto=format&fit=crop&w=800&q=80',
+      image: imgSpotFoto,
       badge: 'Instagramable',
       price: 'Hubungi Kami'
     },
@@ -67,7 +71,7 @@ export default function Services() {
       title: 'Area Bermain Anak',
       description: 'Surganya keceriaan untuk si kecil! Area bermain anak yang aman dan menyenangkan agar buah hati Anda tetap aktif, bahagia, dan terhibur selama berkunjung.',
       icon: <Smile className="text-rose-500" size={24} />,
-      image: imgWahana,
+      image: imgBermainAnak,
       badge: 'Khusus Anak',
       price: 'Hubungi Kami'
     },
@@ -76,7 +80,7 @@ export default function Services() {
       title: 'Gathering Keluarga & Komunitas',
       description: 'Area yang luas dan representatif untuk gathering keluarga besar, acara komunitas, reuni, arisan, ulang tahun, dan berbagai kegiatan kelompok lainnya.',
       icon: <PartyPopper className="text-pink-500" size={24} />,
-      image: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80',
+      image: imgGathering,
       badge: 'Kapasitas Besar',
       price: 'Hubungi Kami'
     },
